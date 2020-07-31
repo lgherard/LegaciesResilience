@@ -16,7 +16,7 @@ colo<-c(1,"#377EB8",   "#E41A1C")
 # colo<-c("#377EB8","#E41A1C",1)
 
 # Figure 1 ----------------------------------------------------------------
-png("figures/Fig1_A_B_V2.png",res = 350, pointsize = 22,height=12,width=7.5,units= "in")
+png("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/figures/Fig1_A_B_V2.png",res = 350, pointsize = 22,height=12,width=7.5,units= "in")
 par(las=1,lwd=1,cex.lab=1,mgp=c(11.75,0.35,0),oma=c(3,3,.5,.5),tck=-0.02,mfrow=c(4,1),family="sans",xpd=NA,lwd=2)
 # total ANPP
 dis<-c(0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6)/20
@@ -107,7 +107,7 @@ mtext(expression(paste("ANPP (g  ",m^-2," ",yr^-1,")",sep=" ")),2,las=0,outer=T,
 dev.off()
 
 # Figure 2 ----------------------------------------------------------------
-png("figures/Fig2_V2.png",res = 350, pointsize = 22,height=11,width=7.5,units= "in")
+png("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/figures/Fig2_V2.png",res = 350, pointsize = 22,height=11,width=7.5,units= "in")
 par(las=1,lwd=1,cex.lab=1,mgp=c(11.75,0.35,0),oma=c(3,3,0.5,.5),tck=-0.02,mfrow=c(3,1),family="sans",xpd=NA,lwd=2)
 
 for (i in 1:5){
@@ -269,7 +269,7 @@ dev.off()
 
 
 # Absolute legacy total ---------------------------------------------------
-png("figures/Fig3_total_V2.png",res = 350, pointsize = 12,height=6,width=5,units= "in")
+png("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/figures/Fig3_total_V2.png",res = 350, pointsize = 12,height=6,width=5,units= "in")
 par(las=1,lwd=1,cex.lab=1.2,mgp=c(2,0.4,0),mar=c(0,0,0.5,0.5),oma=c(3.5,4,0.5,.5),tck=-0.02,mfrow=c(2,1),family="sans",xpd=NA,lwd=2)
 
 layout(matrix(c(1,2),2,1),widths=c(1,2.25),heights = c(2,4))
