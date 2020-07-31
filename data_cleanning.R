@@ -84,7 +84,13 @@ anpp18<-data.frame(Pgrass=cover18[,2]*480.48,Agrass=cover18[,3]*128.12,prgl=cove
 anpp18$total<-anpp18[,1]+anpp18[,2]+anpp18[,3]+anpp18[,4]+anpp18[,5]
 anpp18$year<-2018
 
-ANPP<-rbind(anpp09,anpp10,anpp11,anpp12,anpp13,anpp14,anpp15,anpp16,anpp17,anpp18)
+anpp19<-data.frame(Pgrass=cover19[,2]*480.48,Agrass=cover19[,3]*128.12,prgl=cover19[,4]*0.00004,
+                   Sshrub=cover19[,5]*261.56,forb=(cover19[,6]+cover19[,7])*138.44,
+                   litter=cover19[,8],bare=cover19[,9],sd=cover19[,10],plot=cover19[,1])
+anpp19$total<-anpp19[,1]+anpp19[,2]+anpp19[,3]+anpp19[,4]+anpp19[,5]
+anpp19$year<-2019
+
+ANPP<-rbind(anpp09,anpp10,anpp11,anpp12,anpp13,anpp14,anpp15,anpp16,anpp17,anpp18,anpp19)
 ANPP$rare<-ANPP$Agrass+ANPP$Sshrub+ANPP$forb
 
 ANPP<-merge(ANPP,treat,by="plot")
@@ -99,19 +105,20 @@ ANPP$ppt2015<-ANPP$t2015*154.94
 ANPP$ppt2016<-ANPP$t2016*123.7
 ANPP$ppt2017<-ANPP$t2017*214.12
 ANPP$ppt2018<-ANPP$t2018*177.04
+ANPP$ppt2019<-ANPP$t2019*160.53
 
 # Calculate mean PPT for each treatment
-ANPP$meanPPT<-(ANPP$ppt2009+ANPP$ppt2010+ANPP$ppt2011+ANPP$ppt2012+ANPP$ppt2013+ANPP$ppt2014+ANPP$ppt2015+ANPP$ppt2016+ANPP$ppt2017+ANPP$ppt2018)/10
+ANPP$meanPPT<-(ANPP$ppt2009+ANPP$ppt2010+ANPP$ppt2011+ANPP$ppt2012+ANPP$ppt2013+ANPP$ppt2014+ANPP$ppt2015+ANPP$ppt2016+ANPP$ppt2017+ANPP$ppt2018+ANPP$ppt2019)/11
 
 # Calculate ppt SD
 for (i in 1:length(ANPP[,1])){
   ANPP$pptsd[i]<-sd(c(ANPP[i,"ppt2009"],ANPP[i,"ppt2010"],ANPP[i,"ppt2011"],ANPP[i,"ppt2012"]
                       ,ANPP[i,"ppt2013"],ANPP[i,"ppt2014"],ANPP[i,"ppt2015"],ANPP[i,"ppt2016"]
-                      ,ANPP[i,"ppt2017"],ANPP[i,"ppt2018"]))}
+                      ,ANPP[i,"ppt2017"],ANPP[i,"ppt2018"],ANPP[i,"ppt2019"]))}
 
 # Calculate ppt CV
 ANPP$pptCV<-(ANPP$pptsd/ANPP$meanPPT)*100
-yearPPT<-data.frame(year=c(2009:2018),ppt=c(73.7,128.8,95,65.6,210.5,191.9,154.94,123.7,289.56,167.13))
+yearPPT<-data.frame(year=c(2009:2019),ppt=c(73.7,128.8,95,65.6,210.5,191.9,154.94,123.7,214.12,177.04,160.53))
 ANPP<-merge(ANPP,yearPPT,by="year")
 # write.csv(ANPP,"data/ANPPmetadata14.csv")
 
@@ -134,7 +141,8 @@ ANPP$treat_ppt<-c(ANPP$ppt2009[1:50],
                   ANPP$ppt2015[301:350],
                   ANPP$ppt2016[351:400],
                   ANPP$ppt2017[401:450],
-                  ANPP$ppt2018[451:500])
+                  ANPP$ppt2018[451:500],
+                  ANPP$ppt2019[501:550])
 
 ANPP$total_WUE<-ANPP$total/ANPP$treat_ppt
 ANPP$Pgrass_WUE<-ANPP$Pgrass/ANPP$treat_ppt
