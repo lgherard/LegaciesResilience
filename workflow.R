@@ -102,8 +102,6 @@ mtext("Year",1,line=2.25,cex=1.35)
 
 mtext(expression(paste("ANPP (g  ",m^-2," ",yr^-1,")",sep=" ")),2,las=0,outer=T,cex=1.35,line=0.5)
 
-
-
 dev.off()
 
 # Figure 2 ----------------------------------------------------------------

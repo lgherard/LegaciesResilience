@@ -16,10 +16,10 @@ cover12<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/cur
 cover13<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover13_Rev.csv")
 cover14<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover14_Rev.csv")
 cover15<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover15_Rev.csv")
-cover16<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover16_Rev.csv")
-cover17<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover17_Rev.csv")
-cover18<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover18_Rev.csv")
-cover19<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover19.csv")
+cover16<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover16_Checked.csv")
+cover17<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover17_Checked.csv")
+cover18<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover18_Checked.csv")
+cover19<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/cover19_Checked.csv")
 # Read treatments
 treat<- read.csv("C:/Users/lgherar1.ASURITE/Dropbox (ASU)/lgherar1/desktop/current/Papers/Legacy over time/data/treat.csv")
 
